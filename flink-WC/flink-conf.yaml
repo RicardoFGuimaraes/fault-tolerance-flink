@@ -1,0 +1,17 @@
+blob.server.port: 6124
+execution.checkpointing.mode: EXACTLY_ONCE
+jobmanager.rpc.address: jobmanager
+metrics.reporter.prom.class: org.apache.flink.metrics.prometheus.PrometheusReporter
+metrics.reporter.prom.port: 9250  # Port for Prometheus to scrape metrics
+restart-strategy.fixed-delay.attempts: 10
+query.server.port: 6125
+execution.checkpointing.interval: 30000
+slot.request.timeout: 300000
+restart-strategy.fixed-delay.delay: 10 s
+taskmanager.memory.flink.size: 2g
+taskmanager.numberOfTaskSlots: 2
+state.backend: filesystem
+restart-strategy: fixed-delay
+taskmanager.memory.heap.size: 2g
+jobmanager.memory.heap.size: 1g
+state.checkpoints.dir: file:///tmp/savepoints

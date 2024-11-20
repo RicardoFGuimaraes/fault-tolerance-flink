@@ -1,0 +1,12 @@
+{
+  "name": "mirror-checkpoint-connector",
+  "config": {
+    "connector.class": "org.apache.kafka.connect.mirror.MirrorCheckpointConnector",
+    "tasks.max": "1",
+    "source.cluster.alias": "source-cluster",
+    "target.cluster.alias": "target-cluster",
+    "source.cluster.bootstrap.servers": "source-kafka:9092",
+    "target.cluster.bootstrap.servers": "target-kafka:9092",
+    "topics": ".*"
+  }
+}
