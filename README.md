@@ -46,4 +46,10 @@ Set the entry class as ``flink.FlinkRunner`` and paste the following command lin
 ```
 
 Now you have flink listening to all events inside the Kafka topic.
-To populate this topic, you should log in the Kafka Container and run the ``untitled-1.0-SNAPSHOT.jar`` that was mounted inside ``/home``
+To populate this topic, you should log in the Kafka Container and run the ``untitled-1.0-SNAPSHOT.jar`` that was mounted inside ``/home``.
+This binary file receives a time, in seconds, as input and run for this long a loop sending events do kafka.
+
+To execute the .jar run:
+```
+java -jar untitled-1.0-SNAPSHOT.jar <time>
+```
